@@ -16,7 +16,7 @@
           "GET"
         ],
         "summary": "Get a device enrollment record.",
-        "operationId": "DeviceEnrollment_Get",
+        "operationId": "Registry_GetDeviceEnrollment",
         "consumes": [],
         "produces": [
           "application/json"
@@ -68,7 +68,7 @@
           "PUT"
         ],
         "summary": "Create or update a device enrollment record.",
-        "operationId": "DeviceEnrollment_CreateOrUpdate",
+        "operationId": "Registry_CreateOrUpdateDeviceEnrollment",
         "consumes": [
           "application/json"
         ],
@@ -147,7 +147,7 @@
           "DELETE"
         ],
         "summary": "Delete a device enrollment record.",
-        "operationId": "DeviceEnrollment_Delete",
+        "operationId": "Registry_DeleteDeviceEnrollment",
         "consumes": [],
         "produces": [],
         "parameters": [
@@ -209,7 +209,7 @@
           "GET"
         ],
         "summary": "Get a device enrollment group.",
-        "operationId": "DeviceEnrollmentGroup_Get",
+        "operationId": "Registry_GetDeviceEnrollmentGroup",
         "consumes": [],
         "produces": [
           "application/json"
@@ -261,7 +261,7 @@
           "PUT"
         ],
         "summary": "Create or update a device enrollment group.",
-        "operationId": "DeviceEnrollmentGroup_CreateOrUpdate",
+        "operationId": "Registry_CreateOrUpdateDeviceEnrollmentGroup",
         "consumes": [
           "application/json"
         ],
@@ -340,7 +340,7 @@
           "DELETE"
         ],
         "summary": "Delete a device enrollment group.",
-        "operationId": "DeviceEnrollmentGroup_Delete",
+        "operationId": "Registry_DeleteDeviceEnrollmentGroup",
         "consumes": [],
         "produces": [],
         "parameters": [
@@ -402,7 +402,7 @@
           "GET"
         ],
         "summary": "Gets the device registration state.",
-        "operationId": "RegistrationState_GetRegistrationState",
+        "operationId": "Registry_GetRegistrationState",
         "consumes": [],
         "produces": [
           "application/json"
@@ -454,7 +454,7 @@
           "DELETE"
         ],
         "summary": "Deletes the device registration",
-        "operationId": "RegistrationState_DeleteRegistrationState",
+        "operationId": "Registry_DeleteRegistrationState",
         "consumes": [],
         "produces": [],
         "parameters": [
@@ -516,7 +516,7 @@
           "POST"
         ],
         "summary": "Bulk device enrollment operation.",
-        "operationId": "DeviceEnrollment_BulkOperation",
+        "operationId": "Registry_BulkOperationDeviceEnrollment",
         "consumes": [
           "application/json"
         ],
@@ -583,7 +583,7 @@
           "POST"
         ],
         "summary": "Query the device enrollment records.",
-        "operationId": "DeviceEnrollment_Query",
+        "operationId": "Registry_QueryDeviceEnrollment",
         "consumes": [
           "application/json"
         ],
@@ -661,7 +661,7 @@
           "POST"
         ],
         "summary": "Query the device enrollment groups.",
-        "operationId": "DeviceEnrollmentGroup_Query",
+        "operationId": "Registry_QueryDeviceEnrollmentGroup",
         "consumes": [
           "application/json"
         ],
@@ -739,7 +739,7 @@
           "POST"
         ],
         "summary": "Gets the registration state of devices in this enrollmentGroup.",
-        "operationId": "RegistrationState_QueryRegistrationState",
+        "operationId": "Registry_QueryRegistrationState",
         "consumes": [],
         "produces": [
           "application/json"
