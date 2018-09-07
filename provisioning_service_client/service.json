@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2018-04-01",
-    "title": "DeviceProvisioningService_ServiceRuntimeClient",
-    "description": "API for service operations with the Azure IotHub Device Provisioning Service"
+    "version": "2018-09-01-preview",
+    "title": "ProvisioningServiceClient",
+    "description": "API for service operations with the Azure IoT Hub Device Provisioning Service"
   },
   "host": "localhost",
   "schemes": [
@@ -34,21 +34,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -79,7 +64,7 @@
           {
             "name": "id",
             "in": "path",
-            "description": "Registration ID.",
+            "description": "The registration ID is alphanumeric, lowercase, and may contain hyphens.",
             "required": true,
             "type": "string"
           },
@@ -104,30 +89,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
-          },
-          "415": {
-            "description": "The request payload is in an unsupported format. The request's Content-Type header should be set to 'application/json'."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -170,29 +131,8 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "204": {
             "description": "Success"
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
           },
           "default": {
             "description": "Error response",
@@ -227,21 +167,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -297,30 +222,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
-          },
-          "415": {
-            "description": "The request payload is in an unsupported format. The request's Content-Type header should be set to 'application/json'."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -363,29 +264,8 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "204": {
             "description": "Success"
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
           },
           "default": {
             "description": "Error response",
@@ -420,21 +300,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -477,29 +342,8 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "204": {
             "description": "Success"
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
           },
           "default": {
             "description": "Error response",
@@ -538,30 +382,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
-          "409": {
-            "description": "The request conflicts with the current server state. This error is most likely to occur in response to a PUT, POST, or DELETE request. It can be resolved by using the most recent ETag for the resource."
-          },
-          "412": {
-            "description": "The ETag in the request does not match the ETag of the existing resource, as per RFC7232."
-          },
-          "415": {
-            "description": "The request payload is in an unsupported format. The request's Content-Type header should be set to 'application/json'."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -592,6 +412,21 @@
         ],
         "parameters": [
           {
+            "name": "x-ms-max-item-count",
+            "in": "header",
+            "description": "pageSize",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x-ms-continuation",
+            "in": "header",
+            "description": "continuation token",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "querySpecification",
             "in": "body",
             "description": "The query specification.",
@@ -605,24 +440,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
-          "415": {
-            "description": "The request payload is in an unsupported format. The request's Content-Type header should be set to 'application/json'."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -655,6 +472,45 @@
         }
       }
     },
+    "/enrollments/{id}/attestationmechanism": {
+      "post": {
+        "tags": [
+          "POST"
+        ],
+        "summary": "Get the attestation mechanism in the device enrollment record",
+        "operationId": "DeviceEnrollment_AttestationMechanism",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Registration ID.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/AttestationMechanism"
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "schema": {
+              "$ref": "#/definitions/ProvisioningServiceErrorDetails"
+            }
+          }
+        }
+      }
+    },
     "/enrollmentGroups/query": {
       "post": {
         "tags": [
@@ -670,6 +526,21 @@
         ],
         "parameters": [
           {
+            "name": "x-ms-max-item-count",
+            "in": "header",
+            "description": "pageSize",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x-ms-continuation",
+            "in": "header",
+            "description": "continuation token",
+            "required": false,
+            "type": "string"
+          },
+          {
             "name": "querySpecification",
             "in": "body",
             "description": "The query specification.",
@@ -683,24 +554,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
-          "415": {
-            "description": "The request payload is in an unsupported format. The request's Content-Type header should be set to 'application/json'."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -722,6 +575,45 @@
                 "description": "The query result type.",
                 "type": "string"
               }
+            }
+          },
+          "default": {
+            "description": "Error response",
+            "schema": {
+              "$ref": "#/definitions/ProvisioningServiceErrorDetails"
+            }
+          }
+        }
+      }
+    },
+    "/enrollmentGroups/{id}/attestationmechanism": {
+      "post": {
+        "tags": [
+          "POST"
+        ],
+        "summary": "Get the attestation mechanism in the device enrollment group record",
+        "operationId": "DeviceEnrollmentGroup_AttestationMechanism",
+        "consumes": [],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Enrollment group ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "$ref": "#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "$ref": "#/definitions/AttestationMechanism"
             }
           },
           "default": {
@@ -757,21 +649,6 @@
           }
         ],
         "responses": {
-          "400": {
-            "description": "The body of the request is not valid; for example, it cannot be parsed, or the object cannot be validated."
-          },
-          "401": {
-            "description": "The authorization token cannot be validated; for example, it is expired or does not apply to the request’s URI. This error code is also returned to devices as part of the TPM attestation flow."
-          },
-          "404": {
-            "description": "The Device Provisioning Service instance, or a resource (e.g. an enrollment) does not exist."
-          },
-          "429": {
-            "description": "Operations are being throttled by the service. For specific service limits, see IoT Hub Device Provisioning Service limits."
-          },
-          "500": {
-            "description": "An internal error occurred."
-          },
           "200": {
             "description": "Success",
             "schema": {
@@ -830,7 +707,7 @@
           "description": "Capabilities of the device"
         },
         "registrationId": {
-          "description": "Registration ID.",
+          "description": "The registration ID is alphanumeric, lowercase, and may contain hyphens.",
           "type": "string"
         },
         "deviceId": {
@@ -838,8 +715,13 @@
           "type": "string"
         },
         "registrationState": {
-          "$ref": "#/definitions/DeviceRegistrationState",
-          "description": "Current registration status."
+          "description": "Current registration status.",
+          "allOf": [
+            {
+              "$ref": "#/definitions/DeviceRegistrationState"
+            }
+          ],
+          "readOnly": true
         },
         "attestation": {
           "$ref": "#/definitions/AttestationMechanism",
@@ -866,15 +748,42 @@
           ],
           "type": "string"
         },
+        "reprovisionPolicy": {
+          "$ref": "#/definitions/ReprovisionPolicy",
+          "description": "The behavior when a device is re-provisioned to an IoT hub."
+        },
         "createdDateTimeUtc": {
           "format": "date-time",
           "description": "The DateTime this resource was created.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "lastUpdatedDateTimeUtc": {
           "format": "date-time",
           "description": "The DateTime this resource was last updated.",
+          "type": "string",
+          "readOnly": true
+        },
+        "allocationPolicy": {
+          "description": "The allocation policy of this resource. This policy overrides the tenant level allocation policy for this individual enrollment or enrollment group. Possible values include 'hashed': Linked IoT hubs are equally likely to have devices provisioned to them, 'geoLatency':  Devices are provisioned to an IoT hub with the lowest latency to the device.If multiple linked IoT hubs would provide the same lowest latency, the provisioning service hashes devices across those hubs, 'static' : Specification of the desired IoT hub in the enrollment list takes priority over the service-level allocation policy, 'custom': Devices are provisioned to an IoT hub based on your own custom logic. The provisioning service passes information about the device to the logic, and the logic returns the desired IoT hub as well as the desired initial configuration. We recommend using Azure Functions to host your logic.",
+          "enum": [
+            "hashed",
+            "geoLatency",
+            "static",
+            "custom"
+          ],
           "type": "string"
+        },
+        "iotHubs": {
+          "description": "The list of names of IoT hubs the device(s) in this resource can be allocated to. Must be a subset of tenant level list of IoT hubs.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "customAllocationDefinition": {
+          "$ref": "#/definitions/CustomAllocationDefinition",
+          "description": "Custom allocation definition."
         }
       }
     },
@@ -886,35 +795,36 @@
       "type": "object",
       "properties": {
         "iotEdge": {
-          "description": "IoT Edge capability",
+          "description": "If set to true, this device is an IoTEdge device.",
+          "default": "false",
           "type": "boolean"
         }
       }
     },
     "DeviceRegistrationState": {
       "description": "Device registration state.",
-      "required": [
-        "registrationId",
-        "status"
-      ],
       "type": "object",
       "properties": {
         "registrationId": {
-          "description": "Registration ID.",
-          "type": "string"
+          "description": "The registration ID is alphanumeric, lowercase, and may contain hyphens.",
+          "type": "string",
+          "readOnly": true
         },
         "createdDateTimeUtc": {
           "format": "date-time",
           "description": "Registration create date time (in UTC).",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "assignedHub": {
           "description": "Assigned Azure IoT Hub.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "deviceId": {
           "description": "Device ID.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "status": {
           "description": "Enrollment status.",
@@ -925,48 +835,71 @@
             "failed",
             "disabled"
           ],
-          "type": "string"
+          "type": "string",
+          "readOnly": true
+        },
+        "substatus": {
+          "description": "Substatus for 'Assigned' devices. Possible values include - 'initialAssignment': Device has been assigned to an IoT hub for the first time, 'deviceDataMigrated': Device has been assigned to a different IoT hub and its device data was migrated from the previously assigned IoT hub. Device data was removed from the previously assigned IoT hub, 'deviceDataReset':  Device has been assigned to a different IoT hub and its device data was populated from the initial state stored in the enrollment. Device data was removed from the previously assigned IoT hub.",
+          "enum": [
+            "initialAssignment",
+            "deviceDataMigrated",
+            "deviceDataReset"
+          ],
+          "type": "string",
+          "readOnly": true
         },
         "errorCode": {
           "format": "int32",
           "description": "Error code.",
-          "type": "integer"
+          "type": "integer",
+          "readOnly": true
         },
         "errorMessage": {
           "description": "Error message.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "lastUpdatedDateTimeUtc": {
           "format": "date-time",
           "description": "Last updated date time (in UTC).",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "etag": {
           "description": "The entity tag associated with the resource.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         }
       }
     },
     "AttestationMechanism": {
-      "description": "Device attestation method.",
+      "description": "Attestation mechanism for individualEnrollment as well as enrollmentGroup",
       "required": [
         "type"
       ],
       "type": "object",
       "properties": {
         "type": {
+          "description": "Attestation Type.",
           "enum": [
             "none",
             "tpm",
-            "x509"
+            "x509",
+            "symmetricKey"
           ],
           "type": "string"
         },
         "tpm": {
-          "$ref": "#/definitions/TpmAttestation"
+          "$ref": "#/definitions/TpmAttestation",
+          "description": "TPM attestation method."
         },
         "x509": {
-          "$ref": "#/definitions/X509Attestation"
+          "$ref": "#/definitions/X509Attestation",
+          "description": "X509 attestation method."
+        },
+        "symmetricKey": {
+          "$ref": "#/definitions/SymmetricKeyAttestation",
+          "description": "Symmetric Key attestation method."
         }
       }
     },
@@ -981,6 +914,44 @@
         "properties": {
           "$ref": "#/definitions/InitialTwinProperties",
           "description": "Twin desired properties."
+        }
+      }
+    },
+    "ReprovisionPolicy": {
+      "description": "The behavior of the service when a device is re-provisioned to an IoT hub.",
+      "required": [
+        "updateHubAssignment",
+        "migrateDeviceData"
+      ],
+      "type": "object",
+      "properties": {
+        "updateHubAssignment": {
+          "description": "When set to true (default), the Device Provisioning Service will evaluate the device's IoT Hub assignment and update it if necessary for any provisioning requests beyond the first from a given device. If set to false, the device will stay assigned to its current IoT hub.",
+          "default": "true",
+          "type": "boolean"
+        },
+        "migrateDeviceData": {
+          "description": "When set to true (default), the Device Provisioning Service will migrate the device's data (twin, device capabilities, and device ID) from one IoT hub to another during an IoT hub assignment update. If set to false, the Device Provisioning Service will reset the device's data to the initial desired configuration stored in the corresponding enrollment list.",
+          "default": "true",
+          "type": "boolean"
+        }
+      }
+    },
+    "CustomAllocationDefinition": {
+      "description": "Custom allocation definition.",
+      "required": [
+        "webhookUrl",
+        "apiVersion"
+      ],
+      "type": "object",
+      "properties": {
+        "webhookUrl": {
+          "description": "The webhook URL used for allocation requests.",
+          "type": "string"
+        },
+        "apiVersion": {
+          "description": "The API version of the provisioning service types (such as IndividualEnrollment) sent in the custom allocation request. Supported versions include: \"2018-09-01-preview\"",
+          "type": "string"
         }
       }
     },
@@ -1011,6 +982,20 @@
         },
         "caReferences": {
           "$ref": "#/definitions/X509CAReferences"
+        }
+      }
+    },
+    "SymmetricKeyAttestation": {
+      "description": "Attestation via SymmetricKey.",
+      "type": "object",
+      "properties": {
+        "primaryKey": {
+          "description": "Primary symmetric key.",
+          "type": "string"
+        },
+        "secondaryKey": {
+          "description": "Secondary symmetric key.",
+          "type": "string"
         }
       }
     },
@@ -1139,15 +1124,42 @@
           ],
           "type": "string"
         },
+        "reprovisionPolicy": {
+          "$ref": "#/definitions/ReprovisionPolicy",
+          "description": "The behavior when a device is re-provisioned to an IoT hub."
+        },
         "createdDateTimeUtc": {
           "format": "date-time",
           "description": "The DateTime this resource was created.",
-          "type": "string"
+          "type": "string",
+          "readOnly": true
         },
         "lastUpdatedDateTimeUtc": {
           "format": "date-time",
           "description": "The DateTime this resource was last updated.",
+          "type": "string",
+          "readOnly": true
+        },
+        "allocationPolicy": {
+          "description": "The allocation policy of this resource. This policy overrides the tenant level allocation policy for this individual enrollment or enrollment group. Possible values include 'hashed': Linked IoT hubs are equally likely to have devices provisioned to them, 'geoLatency':  Devices are provisioned to an IoT hub with the lowest latency to the device.If multiple linked IoT hubs would provide the same lowest latency, the provisioning service hashes devices across those hubs, 'static' : Specification of the desired IoT hub in the enrollment list takes priority over the service-level allocation policy, 'custom': Devices are provisioned to an IoT hub based on your own custom logic. The provisioning service passes information about the device to the logic, and the logic returns the desired IoT hub as well as the desired initial configuration. We recommend using Azure Functions to host your logic.",
+          "enum": [
+            "hashed",
+            "geoLatency",
+            "static",
+            "custom"
+          ],
           "type": "string"
+        },
+        "iotHubs": {
+          "description": "The list of names of IoT hubs the device(s) in this resource can be allocated to. Must be a subset of tenant level list of IoT hubs.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "customAllocationDefinition": {
+          "$ref": "#/definitions/CustomAllocationDefinition",
+          "description": "Custom allocation definition."
         }
       }
     },
@@ -1271,10 +1283,10 @@
     "ApiVersionParameter": {
       "name": "api-version",
       "in": "query",
-      "description": "The API version to use for the request. Supported versions include: 2018-04-01",
+      "description": "The API version to use for the request. Supported versions include: 2018-09-01-preview",
       "required": true,
       "type": "string",
-      "default": "2018-04-01"
+      "default": "2018-09-01-preview"
     }
   }
 }
