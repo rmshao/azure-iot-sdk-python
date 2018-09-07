@@ -19,18 +19,25 @@ class DeviceProvisioningServiceServiceRuntimeClientConfiguration(Configuration):
     Note that all parameters used to create this instance are saved as instance
     attributes.
 
+    :param credentials: Subscription credentials which uniquely identify
+     client subscription.
+    :type credentials: None
     :param str base_url: Service URL
     """
 
     def __init__(
-            self, base_url=None):
+            self, credentials, base_url=None):
 
+        if credentials is None:
+            raise ValueError("Parameter 'credentials' must not be None.")
         if not base_url:
             base_url = 'https://localhost'
 
         super(DeviceProvisioningServiceServiceRuntimeClientConfiguration, self).__init__(base_url)
 
         self.add_user_agent('deviceprovisioningserviceserviceruntimeclient/{}'.format(VERSION))
+
+        self.credentials = credentials
 
 
 class DeviceProvisioningServiceServiceRuntimeClient(SDKClient):
@@ -46,14 +53,17 @@ class DeviceProvisioningServiceServiceRuntimeClient(SDKClient):
     :ivar registration_state: RegistrationState operations
     :vartype registration_state: serviceswagger.operations.RegistrationStateOperations
 
+    :param credentials: Subscription credentials which uniquely identify
+     client subscription.
+    :type credentials: None
     :param str base_url: Service URL
     """
 
     def __init__(
-            self, base_url=None):
+            self, credentials, base_url=None):
 
-        self.config = DeviceProvisioningServiceServiceRuntimeClientConfiguration(base_url)
-        super(DeviceProvisioningServiceServiceRuntimeClient, self).__init__(None, self.config)
+        self.config = DeviceProvisioningServiceServiceRuntimeClientConfiguration(credentials, base_url)
+        super(DeviceProvisioningServiceServiceRuntimeClient, self).__init__(self.config.credentials, self.config)
 
         client_models = {k: v for k, v in models.__dict__.items() if isinstance(v, type)}
         self.api_version = '2018-04-01'
