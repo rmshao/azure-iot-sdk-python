@@ -2,9 +2,9 @@ from serviceswagger import DeviceProvisioningServiceServiceRuntimeClient
 from serviceswagger.models import IndividualEnrollment, EnrollmentGroup, AttestationMechanism, TpmAttestation, X509Attestation
 from connection_string import ConnectionString
 
-cs = ConnectionString("HostName=carter-dps-2.azure-devices-provisioning.net;SharedAccessKeyName=provisioningserviceowner;SharedAccessKey=uNqKlY3IR6fB+p78K9mck9PrDsF2uLYpt0r91Hq2gh0=")
+cs = ConnectionString("")
 print(cs)
-client = DeviceProvisioningServiceServiceRuntimeClient(cs, "https://carter-dps-2.azure-devices-provisioning.net")
+client = DeviceProvisioningServiceServiceRuntimeClient(cs, "")
 
 ie = client.device_enrollment.get("test")
 ie = ie
